@@ -9,9 +9,8 @@ export class AddTodo extends Component {
   handleAddTodo() {
     const todoInput = document.querySelector('#todo-input');
     const todoDesc = todoInput.value.trim();
-    todoInput.value = "";
-
     this.props.todoContext.addTodo(todoDesc);
+    todoInput.value = "";
   }
 
   render() {
@@ -23,7 +22,6 @@ export class AddTodo extends Component {
     `
 
     addElement.querySelector("#todo-add-btn").addEventListener("click", this.handleAddTodo);
-
     return addElement;
   }
 }
